@@ -68,7 +68,7 @@ const Cart = ({ cart, setCart }) => {
         }
       </div>
       <div className="text-center">
-        <span className="text-yellow-800 font-bold text-lg">Total Price of your cart</span> = {totalPrice}$
+        <span className="text-yellow-800 font-bold text-lg">Total Price of your cart</span> = {Math.round(totalPrice)}$
       </div>
     </div>
   )
