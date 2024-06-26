@@ -3,11 +3,19 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from './components/Home';
 import Details from './components/Details';
 import Cart from "./components/Cart";
-import { useState } from "react";
-
-
+import { useState, useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 function App() {
+
+  useEffect(() => {
+    AOS.init({
+    duration: 1000, // Global animation duration
+    once: false, // Only once animation
+    });
+    }, []);
+
   const [cart, setCart] = useState([]);
   const [warning, setWarning] = useState(false);
   const [success, setSuccess] = useState(false);
