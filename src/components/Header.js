@@ -9,24 +9,6 @@ const Header = ({ cart }) => {
 
     const [nav, setNav] = useState(false);
 
-
-    const links = [
-        {
-            id: 1,
-            name: "Home",
-            href: "/"
-        },
-        {
-            id: 2,
-            name: <FaShoppingCart size={30} />,
-            href: "/about"
-        },
-        {
-            id: 3,
-            name: "Contact",
-            href: "/contact"
-        },
-    ];
     return (
         <div>
             <header className="shadow-lg shadow-slate-800 w-full h-20">

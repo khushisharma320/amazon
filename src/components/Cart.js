@@ -3,8 +3,7 @@ import { Link } from 'react-router-dom';
 import { MdDelete } from "react-icons/md";
 
 const Cart = ({ cart, setCart }) => {
-  const [price, setPrice] = useState(0);
-  const [amount, setAmount] = useState(0);
+ 
   const [quantities, setQuantities] = useState({});
 
   const totalPrice = cart.reduce((acc, item) => {
@@ -26,15 +25,6 @@ const Cart = ({ cart, setCart }) => {
     });
   };
 
-  const handlePrice = () => {
-    let ans = 0;
-    cart.map((element)=>{
-      return ans = element.price * amount;
-    });
-
-    setPrice(ans);
-  };
-
   const handleDelete = (id) => {
    let result =  cart.filter((element)=>{
          return element.id !== id;
@@ -44,9 +34,7 @@ const Cart = ({ cart, setCart }) => {
 
   }
 
-  useEffect(()=>{
-    handlePrice();
-  })
+
 
   return (
     <div className="mt-10">
