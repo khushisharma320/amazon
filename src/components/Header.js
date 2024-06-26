@@ -27,9 +27,9 @@ const Header = ({ cart }) => {
 
                     {
                         nav &&
-                        <ul className="w-full h-full absolute top-0 left-0 bg-white text-center pt-40">
+                        <ul className="w-full h-full absolute top-0 left-0 bg-white text-center pt-40 z-10" data-aos="flip-left">
                             <li className="hover:text-purple-800 hover:font-semibold mb-10 text-lg text-yellow-950"><Link to="/">Home</Link></li>
-                            <li className="hover:text-purple-800 hover:font-semibold ml-60 mb-10 text-lg text-yellow-950"><Link to="/cart">Cart</Link><span className="bg-green-950 text-white px-2 rounded-full">{cart.length}</span></li>
+                            <li className="hover:text-purple-800 hover:font-semibold mb-10 text-lg text-yellow-950"><Link to="/cart">Cart</Link><span className="bg-green-950 text-white px-2 rounded-full">{cart.length}</span></li>
                             <li className="hover:text-purple-800 hover:font-semibold mb-10 text-lg text-yellow-950"><span>contact</span></li>
                         </ul>
                     }

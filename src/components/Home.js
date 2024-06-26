@@ -25,10 +25,10 @@ const Home = ({cart, warning, success, handleClick}) => {
            <Header cart={cart}/>
             <div className="mt-20">
           {
-            warning && <div className="bg-red-800 text-white w-80 p-4 fixed">This product is already added to the cart</div>
+            warning && <div className="bg-red-800 text-white w-80 p-4 fixed z-20" data-aos="fade-in">This product is already added to the cart</div>
           }
           {
-            success && <div className="bg-green-800 text-white w-80 p-4 fixed">This item has been added</div>
+            success && <div className="bg-green-800 text-white w-80 p-4 fixed z-20" data-aos="fade-in">This item has been added</div>
           }
 
                 <div className="flex justify-center items-center flex-wrap ">
